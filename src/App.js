@@ -2,6 +2,8 @@ import React, { useState, useEffect } from 'react';
 import './styles.css';
 import './CountButtons';
 import CountButtons from './CountButtons';
+import Child from './Child';
+import Child2 from './Child2';
 
 function App() {
   let username = "furgus";
