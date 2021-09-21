@@ -18,7 +18,7 @@ function App() {
   });
 
   useEffect(() => {
-    fetch('https://api.ratesapi.io/api/latest?base=' + currency).then(result => result.json()).then(
+    fetch('https://api.exchangerate.host/latest?base=' + currency).then(result => result.json()).then(
       data => {setRates(data.rates);
       });    
   }, [currency]);
@@ -54,10 +54,11 @@ function App() {
       <button onClick={setUSD}>USD</button>
       <div>
         <button onClick={setEUR}>EUR</button>
+        <h2>{currency} exchange rates</h2>
+        {Object.keys(rates).map((currency, index) => <li key={index}>{currency}: {rates[currency]}</li>)}
       </div>
     </div>
     </React.Fragment>
-
   );
 }
 
