@@ -57,6 +57,8 @@ function App() {
 
     <h4>button with memoization:</h4>
     <Child step={7} setCounter={setCount} />
+    <Child2 reset={reset} />
+    
     <div>
       <h2>The effect hook</h2>
       <button onClick={setUSD}>USD</button>
