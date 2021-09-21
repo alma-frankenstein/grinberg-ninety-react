@@ -21,7 +21,7 @@ function App() {
     document.title = `${counter} meow`;
   });
 
-  const reset = React.useCallback(() => { setCounter(0); }, []);
+  const reset = React.useCallback(() => { setCount(0); }, []);
 
   useEffect(() => {
     fetch('https://api.exchangerate.host/latest?base=' + currency).then(result => result.json()).then(
@@ -56,7 +56,7 @@ function App() {
     <CountButtons counter={counter} setCount={setCount} step={3} />
 
     <h4>button with memoization:</h4>
-    <Child step={7} setCounter={setCounter} />
+    <Child step={7} setCounter={setCount} />
     <div>
       <h2>The effect hook</h2>
       <button onClick={setUSD}>USD</button>
